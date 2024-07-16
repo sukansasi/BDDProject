@@ -1,5 +1,5 @@
 package Step_Definitions;
-
+import io.cucumber.java.*;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -10,7 +10,8 @@ import pageObjectModel.LoginPage;
 
 public class Login {
 
-    private final WebDriver Driver = Hooks.Driver;
+    public static WebDriver Driver = Hooks.Driver;
+
     LoginPage login = new LoginPage(Driver);
     @Given("navigates to Login page")
     public void navigatesToLoginPage() {
@@ -31,7 +32,15 @@ public class Login {
     }
 
     @Then("navigates to Logged page")
-    public void navigatesToLoggedPage() {
-        login.verifyLoginSuccess();
+    public void navigatesToLoggedPage() throws InterruptedException {
+        Thread.sleep(5000);
+        Assert.assertTrue(login.verifyLoginSuccess());
+    }
+
+    @Then("display error message")
+    public void displayErrorMessage() throws InterruptedException {
+        System.out.println("******Error message is: "+login.getError());
+Assert.assertTrue(login.verifyErrorReg());
+Thread.sleep(5000);
     }
 }

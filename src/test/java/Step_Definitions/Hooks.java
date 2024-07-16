@@ -15,11 +15,11 @@ public class Hooks {
         Driver = new ChromeDriver();
         Driver.get("https://demo.nopcommerce.com");
         Driver.manage().window().maximize();
-        System.out.println("--------------------Start-----------------");
+//        System.out.println("--------------------Start-----------------");
     }
     @After
     public void closeBrowser(){
         Driver.quit();
-        System.out.println("--------------------End-------------");
+        System.out.println("--------------------End-----------------");
     }
 }

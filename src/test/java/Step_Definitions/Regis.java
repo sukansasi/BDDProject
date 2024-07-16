@@ -47,6 +47,7 @@ public class Regis {
         Thread.sleep(5000);
 
         obj.ClickRegButton();
+        Thread.sleep(3000);
     }
     @Then("Display success message")
     public void displaySuccessMessage() {
@@ -58,8 +59,8 @@ public class Regis {
     public void displayErrorMessage() throws InterruptedException {
 
         Thread.sleep(5000);
-//        obj.getErrors();
-        System.out.println("******Error message is: "+obj.getErrors()+"********");
+        obj.getErrors();
+
 
         Assert.assertTrue(obj.verifyErrorReg());
     }

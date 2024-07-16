@@ -13,4 +13,13 @@ Feature: BDD_Login with valid and Invalid inputs
     |username                   |password    |
     |sukanyasasi2013@gmail.com  |asdfghj     |
 
+  @negative
+  Scenario Outline: BDD_Login with invalid inputs
+
+    When I enter "<username>" as username and  "<password>" as password
+    And click Login button
+    Then display error message
+    Examples:
+      |username                   |password    |
+      |sukanyasasi2013@gmail.com  |asdfghji     |
 

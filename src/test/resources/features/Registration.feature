@@ -28,4 +28,5 @@ Scenario Outline: BDD_Registration with invalid inputs
     |Female |   Sukan    |Sasikumar |10    |    10 |1990  |suansas2013@gmail.com|            |                 |
     |Male   | Sasi       |          |15    |    12 |2000  |idsasi@gmail.com     |lkjhgf      |lkjhgf           |
     |Male   | Sasi       |  Kumar   |15    |    12 |2000  |                     | lkjhgf     |  lkjhgf         |
-    |Male   |            |   Kum    |15    |    12 |2000  |imdsasi@gmail.com    |lkjhgf      |lkjhgf           |
+    |Male   |            |  Kum     |15    |    12 |2000  |imdsasi@gmail.com    |lkjhgf      |lkjhgf           |
+    |Female |   Sukan    |Sasikumar |10    |    10 |1990  |ukansas2013@gmail.com| as   |as       |

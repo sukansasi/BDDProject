@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
-    public static WebDriver driver;
+    public  WebDriver driver;
     public LoginPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
@@ -23,7 +23,7 @@ public class LoginPage {
     @FindBy(className = "message-error")
     private WebElement errorMessage;
 @FindBy(className = "ico-logout")
-private WebElement logoutLink;
+private WebElement homepage;
 
     public void clickLoginLink() {
         loginLink.click();
@@ -47,7 +47,22 @@ private WebElement logoutLink;
         return loginButton.isDisplayed();
     }
     public boolean verifyLoginSuccess() {
-        return logoutLink.isDisplayed();
+        return homepage.isDisplayed();
+    }
+
+    public String getError() {
+        try {
+            if (errorMessage.isDisplayed()) {
+                return errorMessage.getText();
+            } else {
+                return "No Error";
+            }
+        } catch (Exception e) {
+            return null;
+        }
+    }
+    public boolean verifyErrorReg() {
+        return errorMessage.isDisplayed();
     }
 }
 

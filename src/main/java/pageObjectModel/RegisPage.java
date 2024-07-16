@@ -58,18 +58,19 @@ public class RegisPage {
     @FindBy(className = "result")
     private WebElement successMsg;
 
-    @FindBy(xpath = "//span[@id='FirstName-error']")
+    @FindBy(css = "#FirstName-error")
     public WebElement firstNameError;
-    @FindBy(xpath = "//span[@id='LastName-error']")
+    @FindBy(css = "#LastName-error")
     public WebElement lastNameError;
-    @FindBy(xpath = "//span[@id='Email-error']")
+    @FindBy(css = "#Email-error")
     public WebElement emailError;
 
-    @FindBy(xpath = "//span[@id='ConfirmPassword-error']")
+    @FindBy(css = "#Password-error")
     public WebElement confirmPasswordError;
     @FindBy(xpath = "//li[normalize-space()='The specified email already exists']")
     public WebElement existEmailError;
-
+    @FindBy(css = "span.field-validation-error")
+    private List<WebElement> errorList;
 
     @FindBy(id = "company")
     private WebElement company;
@@ -143,24 +144,21 @@ public class RegisPage {
         registerButton.click();
     }
 
-//public void setErrors(WebElement firstNameError, WebElement lastNameError, WebElement emailError, WebElement confirmPasswordError) {
-//        this.firstNameError = firstNameError;
-//        this.lastNameError = lastNameError;
-//        this.emailError = emailError;
-//        this.confirmPasswordError = confirmPasswordError;
-//    }
 
 
-    public String getErrors() {
-        try {
-            if (firstNameError.isDisplayed() || lastNameError.isDisplayed() || emailError.isDisplayed() || confirmPasswordError.isDisplayed()) {
-                return "Error";
-            } else {
-                return "No Error";
+
+    public boolean getErrors() {
+        System.out.println("Number of errors in the scenario: " + errorList.size());
+        for (WebElement error : errorList) {
+
+
+            if (error.isDisplayed()) {
+                System.out.println("Error: " + error.getText());
+                return true;
             }
-        } catch (Exception e) {
-            return null;
         }
+        return false;
+
     }
 }
 

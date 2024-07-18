@@ -30,13 +30,12 @@ public class Regis {
     @When("Fill the Registration form with details {string},{string},{string},{string} ,{string},{string},{string},{string} ,{string}")
     public void RegistrationFormDetails(String arg0, String arg1, String arg2, String arg3, String arg4, String arg5, String arg6, String arg7, String arg8) throws InterruptedException {
         obj.setGender(arg0);
-        Thread.sleep(5000);
+
         obj.setFirstName(arg1);
         obj.setLastName(arg2);
         obj.setDate(arg3);
         obj.setMonth(arg4);
         obj.setYear(arg5);
-        Thread.sleep(5000);
         obj.setEmail(arg6);
         obj.setPassword(arg7);
         obj.setConfirmPassword(arg8);

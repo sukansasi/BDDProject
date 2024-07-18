@@ -24,9 +24,10 @@ Scenario Outline: BDD_Registration with invalid inputs
   Examples:
 
     |Gender | First Name |Last Name | Date | Month | Year |Email                | Password   |Confirm password |
-    |Female |   Sukan    |Sasikumar |10    |    10 |1990  |ukansas2013@gmail.com| asdfghj    |asdfgjkljl       |
+    |Female |   Sukan    |Sasikumar |10    |    10 |1990  | uansas2013@gmail.com | asdfghj    |asdfgjkljl       |
     |Female |   Sukan    |Sasikumar |10    |    10 |1990  |suansas2013@gmail.com|            |                 |
     |Male   | Sasi       |          |15    |    12 |2000  |idsasi@gmail.com     |lkjhgf      |lkjhgf           |
     |Male   | Sasi       |  Kumar   |15    |    12 |2000  |                     | lkjhgf     |  lkjhgf         |
-    |Male   |            |  Kum     |15    |    12 |2000  |imdsasi@gmail.com    |lkjhgf      |lkjhgf           |
+    |Male   |            |  Kum     |15    |    12 |2000  |                     |lkjhgf      |lkjhgf           |
     |Female |   Sukan    |Sasikumar |10    |    10 |1990  |ukansas2013@gmail.com| as   |as       |
+    |Male   |            |          |15    |    12 |2000  |imdsasi@gmail.com    |lkjhgf      |lkjhgf           |

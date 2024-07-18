@@ -147,17 +147,17 @@ public class RegisPage {
 
 
 
-    public boolean getErrors() {
+    public boolean getErrors() throws InterruptedException {
         System.out.println("Number of errors in the scenario: " + errorList.size());
         for (WebElement error : errorList) {
 
-
-            if (error.isDisplayed()) {
                 System.out.println("Error: " + error.getText());
-                return true;
-            }
+
+
+
         }
-        return false;
+
+        return true;
 
     }
 }

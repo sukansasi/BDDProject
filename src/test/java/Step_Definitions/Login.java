@@ -39,8 +39,8 @@ public class Login {
 
     @Then("display error message")
     public void displayErrorMessage() throws InterruptedException {
-        System.out.println("******Error message is: "+login.getError());
-Assert.assertTrue(login.verifyErrorReg());
+
+Assert.assertTrue(login.verifyErrorMessage());
 Thread.sleep(5000);
     }
 }

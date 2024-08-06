@@ -16,6 +16,7 @@ Background:
     |Gender | First Name |Last Name | Date | Month | Year |Email                     | Password   |Confirm password |
     |Female | Sukanya   |Sasikumar  |10    |    10 |1990  |sukanyasasi2013@gmail.com| asdfghj    |asdfghj          |
     |Male   | Sasi      |Kumar      |15    |    12 |2000  |iamdsasi@gmail.com       |lkjhgf      |lkjhgf           |
+    
 @negative
 Scenario Outline: BDD_Registration with invalid inputs
   When Fill the Registration form with details "<Gender>","<First Name>","<Last Name>","<Date>" ,"<Month>","<Year>","<Email>","<Password>" ,"<Confirm password>"

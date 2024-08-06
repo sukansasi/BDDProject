@@ -43,7 +43,7 @@ public class Regis {
 
     @And("click Register button")
     public void clickRegisterButton() throws InterruptedException {
-        Thread.sleep(5000);
+        Thread.sleep(3000);
 
         obj.ClickRegButton();
         Thread.sleep(3000);
